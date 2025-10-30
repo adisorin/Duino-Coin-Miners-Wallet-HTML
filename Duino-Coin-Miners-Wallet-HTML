@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duino Account Dashboard - username account here</title> //*change ”username account here”*//
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <style>
+    /* === FUNDAL STATIC CU PROFUNZIME === */
+    body {
+      background: radial-gradient(circle at 20% 20%, #0f172a, #020617);
+      color: #f8fafc;
+      perspective: 1000px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* === CARDURI 3D === */
+    .box {
+      background: rgba(30, 41, 59, 0.7);
+      border-radius: 1rem;
+      border: 1px solid rgba(56,189,248,0.3);
+      box-shadow: 0 0 20px rgba(56,189,248,0.1);
+      padding: 1rem;
+      transform-style: preserve-3d;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      transform: translateY(40px) scale(0.9) rotateX(10deg);
+      animation: appear3D 1s ease forwards;
+    }
+
+    @keyframes appear3D {
+      0% { opacity: 0; transform: translateY(40px) scale(0.9) rotateX(10deg); }
+      100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0deg); }
+    }
+
+    .box:hover {
+      transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+      box-shadow: 0 10px 30px rgba(56,189,248,0.3);
+    }
+
+    /* === TITLU 3D === */
+    .title {
+      position: relative;
+      display: inline-block;
+      transform: rotateX(0deg) rotateY(0deg);
+      animation: title3D 5s ease-out forwards;
+    }
+
+    @keyframes title3D {
+      0% { opacity: 0; transform: translateY(-20px) rotateX(45deg) scale(0.8); }
+      100% { opacity: 1; transform: translateY(0) rotateX(0) scale(1); }
+    }
+
+	.icon {
+	  height: 4rem;      /* mărește cât vrei */
+	  width: 4rem;       /* forțează lățimea egală cu înălțimea */
+	  border-radius: 50%; /* face imaginea rotundă */
+	  margin-right: 0.5rem;
+	  transform-origin: center;
+	  animation: spin3D 10s linear infinite;
+	  filter: drop-shadow(0 0 5px rgba(56,189,248,0.5));
+	}
+
+    @keyframes spin3D {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+
+    /* === TEXT ȘI GLOW === */
+    .muted { color: #94a3b8; }
+    .muted1 { color: #ff4500; }
+    .glow { text-shadow: 0 0 10px rgba(56,189,248,0.8); color: #38bdf8; }
+    .value { color: #ffffff; font-weight: 600; }
+    .value1 { color: #4169e1; font-weight: 600; }
+    .value2 { color: #00ff00; font-weight: 600; }
+    .value3 { color: #ffff00; font-weight: 600; }
+    .value4 { color: #ff4500; font-weight: 600; }
+    .value5 { color: #ffa500; font-weight: 600; }
+	.value6 { color: #94a3ff; font-weight: 600; }
+
+    .hashrate { font-weight: 700; color: #00ff00; font-size: 1.2rem; }
+
+    /* === EFECT PULSE === */
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { text-shadow: 0 0 5px rgba(56,189,248,0.8); opacity: 1; }
+      50% { text-shadow: 0 0 20px rgba(56,189,248,1); opacity: 0.7; }
+      100% { text-shadow: 0 0 5px rgba(56,189,248,0.8); opacity: 1; }
+    }
+
+    /* === MINERI 3D === */
+    #active_miners .box {
+      animation-delay: 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #active_miners .box:hover {
+      transform: translateZ(20px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,255,255,0.3);
+    }
+
+    /* === LINKURI === */
+    a img:hover {
+      opacity: 1 !important;
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="container has-text-centered">
+      <h1 class="title glow">
+        <img class="icon" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true" alt="Duco">
+        Duino Account Dashboard
+      </h1>
+      <p class="subtitle pulse muted">Duino-Coin account live monitoring: <strong></strong></p>
+
+      <div class="columns is-multiline mt-5">
+        <div class="column is-one-quarter"><div class="box"><p class="heading">username</p><p class="title is-4 value1" id="username">—</p></div></div>
+        <div class="column is-one-quarter"><div class="box"><p class="heading">Balance</p><p class="title is-4 pulse value2" id="balance">—</p></div></div>
+        <div class="column is-one-quarter"><div class="box"><p class="heading">Account created</p><p class="title is-4 value3" id="created">—</p></div></div>
+        <div class="column is-one-quarter"><div class="box"><p class="heading">Last login</p><p class="title is-4 value5" id="last_login">—</p></div></div>
+        <div class="column is-one-quarter"><div class="box"><p class="heading">Max. Miners</p><p class="title is-4 value" id="max_miners">—</p></div></div>
+        <div class="column is-one-quarter"><div class="box"><p class="heading">Stake Amount</p><p class="title is-4 value" id="stake_amount">—</p></div></div>
+        <div class="column is-one-quarter"><div class="box"><p class="heading">Trust Score</p><p class="title is-4 value" id="trust_score">—</p></div></div>
+        <div class="column is-one-quarter"><div class="box"><p class="heading">Verified</p><p class="title is-4 pulse value" id="verified">—</p></div></div>
+        <div class="column is-one-quarter"><div class="box"><p class="heading">Verified By</p><p class="title is-4 value" id="verified_by">—</p></div></div>
+        <div class="column is-one-quarter"><div class="box"><p class="heading">Warnings</p><p class="title is-4 value4" id="warnings">—</p></div></div>
+        
+        <!-- Adăugăm totalul Hashrate lângă "Warnings" -->
+        <div class="column is-one-quarter"><div class="box"><p class="heading value6">Total Hashrate</p><p class="title is-4 value2 " id="total_hashrate">—</p></div></div>
+      </div>
+
+      <div class="mt-5">
+        <p class="muted">Server: <span id="server">—</span></p>
+        <p class="muted">Status API: <span id="status">—</span></p>
+        <p class="muted">Last update: <span id="last_update">—</span></p>
+      </div>
+    </div>
+
+    <div class="container has-text-centered">
+      <h2 class="title is-1 pulse has-text-info">Online miners:</h2>
+
+      <div id="active_miners" class="columns is-multiline mt-3"></div>
+
+      <p class="mt-2 muted">
+        Created by Sor Adi © 2025 • <a href="https://duinocoin.com" target="_blank">duinocoin.com</a>
+      </p>
+	  
+	  
+	  <p class="mt-0 muted1 pulse">
+        ***Warning! This html consumes resources due to its 3D graphics.***<a href="target="_blank"></a>
+      </p>
+
+      <div class="mt-2 pulse">
+        <a href="https://www.facebook.com/Sorinesc" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32">
+        </a>
+        <a href="https://github.com/adisorin?tab=projects" target="_blank" title="GitHub">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" 
+               alt="GitHub" width="32" height="32" style="filter:invert(1); opacity:0.8; margin-left:10px;">
+        </a>
+		
+		<a href="https://explorer.duinocoin.com/" target="_blank" title="Live Duino network statistics">
+          <img src="https://github.com/duino-coin/duino-coin/blob/master/Resources/Node.png?raw=true" 
+               alt="Live Duino network statistics" width="36" height="36" style="filter:invert(1); opacity:0.8; margin-left:10px;">
+        </a>
+		
+		<a href="https://siunus.github.io/duco-monitor/v2023/" target="_blank" title="siunus.github.io">
+          <img src="https://github.com/duino-coin/duino-coin/blob/master/Resources/WebMiner.png?raw=true" 
+               alt="siunus.github.io" width="36" height="36" style="filter:invert(1); opacity:0.8; margin-left:10px;">
+        </a>
+		
+		<a href="https://duco-faucet.pcgeek.pl/" target="_blank" title="Duino Coin Faucet - AMOGUS">
+          <img src="https://github.com/duino-coin/duino-coin/blob/master/Resources/duco-alt.png?raw=true" 
+               alt="siunus.github.io" width="36" height="36" style="filter:invert(1); opacity:0.8; margin-left:10px;">
+        </a>
+		
+      </div>
+    </div>
+  </section>
+
+  <script>
+    async function updateDashboard() {
+      try {
+        const resUser = await fetch("https://server.duinocoin.com/users/username account here"); //*change ”username account here”*//
+        const dataUser = await resUser.json();
+        const r = dataUser.result.balance;
+
+        document.getElementById("username").textContent = r.username;
+        document.getElementById("balance").textContent = r.balance.toFixed(4) + " DUCO";
+        document.getElementById("created").textContent = r.created;
+        document.getElementById("last_login").textContent = new Date(r.last_login * 1000).toLocaleString();
+        document.getElementById("max_miners").textContent = r.max_miners;
+        document.getElementById("stake_amount").textContent = r.stake_amount + " DUCO";
+        document.getElementById("trust_score").textContent = r.trust_score;
+        document.getElementById("verified").textContent = r.verified === "yes" ? "✅ Yes" : "❌ No";
+        document.getElementById("verified_by").textContent = r.verified_by;
+        document.getElementById("warnings").textContent = r.warnings;
+        document.getElementById("server").textContent = dataUser.server;
+        document.getElementById("status").innerHTML = dataUser.success ? "🟢 Online" : "🔴 Offline";
+        document.getElementById("last_update").textContent = new Date().toLocaleTimeString();
+        document.title = `Duino Dashboard - ${r.username} (${r.balance.toFixed(2)} DUCO)`;
+
+        const resMiners = await fetch("https://server.duinocoin.com/miners/username account here"); //*change ”username account here”*//
+        const dataMiners = await resMiners.json();
+        const minersContainer = document.getElementById("active_miners");
+        minersContainer.innerHTML = "";
+        let totalHashrate = 0;
+
+        if (dataMiners.result && dataMiners.result.length > 0) {
+          dataMiners.result.forEach((miner, index) => {
+            const col = document.createElement("div");
+            col.className = "column is-one-quarter";
+            col.innerHTML = `
+              <div class="box glow" style="animation-delay:${index * 0.1}s;">
+                <p class="heading">${miner.identifier}</p>
+                <p class="hashrate">${miner.hashrate} H/s</p>
+              </div>`;
+            minersContainer.appendChild(col);
+            
+            // Sumăm hashrate-ul total
+            totalHashrate += miner.hashrate;
+          });
+          // Afișăm totalul hashrate-ului
+          document.getElementById("total_hashrate").textContent = totalHashrate + " H/s";
+        } else {
+          minersContainer.innerHTML = "<p class='muted1'>Nu sunt mineri activi</p>";
+          document.getElementById("total_hashrate").textContent = "0 H/s";
+        }
+
+      } catch (err) {
+        console.error("Eroare la preluarea datelor:", err);
+        document.getElementById("status").innerHTML = "🔴 Connection error!";
+      }
+    }
+
+    updateDashboard();
+    setInterval(updateDashboard, 60000);
+  </script>
+</body>
+</html>
