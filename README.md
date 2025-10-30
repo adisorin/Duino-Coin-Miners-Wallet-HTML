@@ -1,1 +1,2 @@
 ![Imagine WhatsApp 2025-10-30 la 21 58 19_bd0d16e9](https://github.com/user-attachments/assets/889d36be-db99-4b38-8895-3803a0dd04f9)
+HTML file that can be used to monitor DUCO value in digital wallet, real-time miner monitoring, 3D animation. Modern and intuitive appearance. During operation, the file consumes moderate resources because the 3D animation runs continuously. Not recommended for mobile phones.
