@@ -1,5 +1,6 @@
 ![Imagine WhatsApp 2025-10-30 la 21 58 19_bd0d16e9](https://github.com/user-attachments/assets/889d36be-db99-4b38-8895-3803a0dd04f9)
 
+Romanian translation:
 
 # Duino Account Dashboard – Monitorizare live Duino-Coin
 
@@ -44,3 +45,55 @@ Duino Account Dashboard este un exemplu de **dashboard web modern, estetic și f
 
 Autor: Sorinescu Adrian
 
+
+
+English translation:
+
+**Duino Account Dashboard – Live Monitoring for Duino-Coin**
+
+The **Duino Account Dashboard** is a modern web dashboard created for real-time monitoring of Duino-Coin accounts and miners. The project combines modern **HTML, CSS, and JavaScript** techniques to deliver an interactive and elegant visual experience without compromising performance.
+
+---
+
+### **Key Features**
+
+#### **1. Intuitive and Organized Interface**
+
+* Clear structure based on the **Bulma CSS framework**, ensuring a responsive and easy-to-navigate layout.
+* Account data (username, balance, creation date, last login, etc.) are displayed in individual cards for quick and coherent visualization.
+
+#### **2. Modern Visual Design**
+
+* **Radial gradient background** and **perspective effects** create a sense of depth.
+* Cards and titles feature **3D animations** and **glow effects**.
+* Animated icons and graphics add visual dynamism (e.g., rotating logo effect).
+
+#### **3. Live Monitoring of Account and Miners**
+
+* The interface retrieves **real-time data using the Duino-Coin API**.
+* **Automatic updates every 60 seconds**, without requiring a page reload.
+* Miner cards display **individual hashrates**, with a **total hashrate** calculated automatically.
+
+#### **4. Thoughtful User Experience**
+
+* Critical values (e.g., warnings, API status) are highlighted with **colors and pulsing animations**.
+* Informative messages about server status and the latest updates help users stay informed.
+* Pleasant visual interactions, such as **hover effects** on cards and icons.
+
+#### **5. Scalable and Modular Design**
+
+* The code is easy to extend — you can add new account data or miners without affecting existing functionality.
+* CSS classes and IDs are **well-structured**, simplifying style customization.
+
+#### **6. Interactive Elements and Branding**
+
+* Includes useful external links (GitHub, Facebook, Explorer, WebMiner) with **consistent and stylized icons**.
+* Animations and color schemes follow a **cohesive palette**, ensuring a professional and unified look.
+
+---
+
+### **Conclusion**
+
+The **Duino Account Dashboard** is a showcase of a modern, aesthetic, and functional web dashboard that combines advanced CSS techniques, 3D animations, and dynamic API interactions. It’s ideal for any **Duino-Coin enthusiast** who wants to monitor their account and miners in a visual and intuitive way.
+
+**Author:** *Sorinescu Adrian*
