@@ -56,7 +56,7 @@ The **Duino Account Dashboard** is a modern web dashboard created for real-time 
 
 ---
 
-### **Main features**
+## **Main features** ##
 
 #### **1. Intuitive and Organized Interface**
 
