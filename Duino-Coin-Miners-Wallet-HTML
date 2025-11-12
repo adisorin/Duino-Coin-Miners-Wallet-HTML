@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Duino Account Dashboard - username account here</title> //*change ”username account here”*//
+  <title>Duino Account Dashboard - YourUsername</title> <!-- === change ”YourUsername” === -->
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <style>
     /* === FUNDAL STATIC CU PROFUNZIME === */
@@ -155,11 +156,11 @@
 	  
 	  
 	  <p class="mt-0 muted1 pulse">
-        ***Warning! This html consumes resources due to its 3D graphics.***<a href="target="_blank"></a>
+        ***Warning! This html consumes resources due to its 3D graphics.***
       </p>
 
       <div class="mt-2 pulse">
-        <a href="https://www.facebook.com/Sorinesc" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/groups/454273464099316" target="_blank" rel="noopener noreferrer">
           <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32">
         </a>
         <a href="https://github.com/adisorin?tab=projects" target="_blank" title="GitHub">
@@ -189,7 +190,7 @@
   <script>
     async function updateDashboard() {
       try {
-        const resUser = await fetch("https://server.duinocoin.com/users/username account here"); //*change ”username account here”*//
+        const resUser = await fetch("https://server.duinocoin.com/users/YourUsername"); // change ”YourUsername”
         const dataUser = await resUser.json();
         const r = dataUser.result.balance;
 
@@ -208,7 +209,7 @@
         document.getElementById("last_update").textContent = new Date().toLocaleTimeString();
         document.title = `Duino Dashboard - ${r.username} (${r.balance.toFixed(2)} DUCO)`;
 
-        const resMiners = await fetch("https://server.duinocoin.com/miners/username account here"); //*change ”username account here”*//
+        const resMiners = await fetch("https://server.duinocoin.com/miners/YourUsername"); // change ”YourUsername” 
         const dataMiners = await resMiners.json();
         const minersContainer = document.getElementById("active_miners");
         minersContainer.innerHTML = "";
