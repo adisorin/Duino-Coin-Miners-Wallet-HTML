@@ -49,7 +49,7 @@ Autor: Sorinescu Adrian
 
 English translation:
 
-**Duino Account Dashboard – Live Monitoring for Duino-Coin**
+# Duino Account Dashboard – Duino-Coin Live Monitoring
 
 The **Duino Account Dashboard** is a modern web dashboard created for real-time monitoring of Duino-Coin accounts and miners. The project combines modern **HTML, CSS, and JavaScript** techniques to deliver an interactive and elegant visual experience without compromising performance.
 
