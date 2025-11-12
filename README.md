@@ -47,6 +47,7 @@ Autor: Sorinescu Adrian
 
 
 
+
 English translation:
 
 # Duino Account Dashboard – Duino-Coin Live Monitoring
@@ -55,7 +56,7 @@ The **Duino Account Dashboard** is a modern web dashboard created for real-time 
 
 ---
 
-### **Key Features**
+### **Main features**
 
 #### **1. Intuitive and Organized Interface**
 
