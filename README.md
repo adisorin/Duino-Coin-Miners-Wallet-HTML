@@ -1,5 +1,9 @@
 ![Imagine WhatsApp 2025-10-30 la 21 58 19_bd0d16e9](https://github.com/user-attachments/assets/889d36be-db99-4b38-8895-3803a0dd04f9)
 
+# DUCO-SCOUNT-3D.V2.7.3 View miner details.
+<img width="1070" height="894" alt="image" src="https://github.com/user-attachments/assets/e6789a82-95ee-4849-ac40-3688e2542cd8" />
+
+
 Romanian translation:
 
 # Duino Account Dashboard – Monitorizare live Duino-Coin
