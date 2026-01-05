@@ -47,6 +47,7 @@ Romanian translation:
 ## Concluzie
 
 Duino Account Dashboard este un exemplu de **dashboard web modern, estetic și funcțional**, combinând tehnici CSS avansate, animații 3D și interacțiuni dinamice cu API-ul. Este ideal pentru orice entuziast al Duino-Coin care vrea să-și monitorizeze contul și minerii într-un mod vizual și intuitiv.
+Mulțumesc și celor de la Duino-Coin pentru faptul că au pornit https://duinocoin.com/
 
 Autor: Sorinescu Adrian
 
@@ -101,5 +102,6 @@ The **Duino Account Dashboard** is a modern web dashboard created for real-time 
 ### **Conclusion**
 
 The **Duino Account Dashboard** is a showcase of a modern, aesthetic, and functional web dashboard that combines advanced CSS techniques, 3D animations, and dynamic API interactions. It’s ideal for any **Duino-Coin enthusiast** who wants to monitor their account and miners in a visual and intuitive way.
+Thanks also to Duino-Coin for starting https://duinocoin.com/
 
 **Author:** *Sorinescu Adrian*
