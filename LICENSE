@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-Proiect: Duino Account Dashboard
-Autor: Sorinescu Adrian (Sor Adi)
-An: 2025
-Descriere: Dashboard HTML/CSS/JS pentru monitorizarea contului Duino-Coin,
-cu efecte 3D și actualizare live prin API-ul Duino-Coin.
