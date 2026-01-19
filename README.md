@@ -28,6 +28,9 @@ Romanian translation:
 * Interfața preia date în timp real folosind **API-ul Duino-Coin**.
 * Actualizările sunt automate, la fiecare 60 de secunde, fără a necesita reîncărcarea paginii.
 * Cardurile pentru mineri includ **hashrate individual** și un **total Hashrate** calculat automat.
+### De reținut
+Pentru monitorizare personală: O interogare la fiecare 30 - 60 de secunde este considerată ideală. Aceasta oferă date actualizate fără a solicita inutil serverele proiectului.
+Frecvența maximă sigură: Evitați să faceți mai mult de o solicitare la 5-10 secunde. Solicitările mai dese pot fi interpretate ca un atac de tip spam sau bot. 
 
 ### 4. Experiență de utilizator atent gândită
 * Valori critice (ex. warnings, status API) sunt evidențiate prin culori și animații pulsante.
