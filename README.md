@@ -31,6 +31,7 @@ Romanian translation:
 ### De reținut
 Pentru monitorizare personală: O interogare la fiecare 30 - 60 de secunde ( ”setInterval(updateDashboard, 60000);” ) este considerată ideală. Aceasta oferă date actualizate fără a solicita inutil serverele proiectului.
 Frecvența maximă sigură: Evitați să faceți mai mult de o solicitare la 5-10 secunde. Solicitările mai dese pot fi interpretate ca un atac de tip spam sau bot. 
+Recomand să setați timpul de reîmprospătare al panoului de control al actualizărilor la 120.000 de milisecunde, adică 2 minute. NU deschideți mai multe dispozitive simultan cu aceeași aplicație, deoarece generează un conflict Cloudfare: Prea multe solicitări pe minut.
 
 ### 4. Experiență de utilizator atent gândită
 * Valori critice (ex. warnings, status API) sunt evidențiate prin culori și animații pulsante.
@@ -84,6 +85,11 @@ The **Duino Account Dashboard** is a modern web dashboard created for real-time 
 * The interface retrieves **real-time data using the Duino-Coin API**.
 * **Automatic updates every 60 seconds**, without requiring a page reload.
 * Miner cards display **individual hashrates**, with a **total hashrate** calculated automatically.
+* 
+* ### Things to remember
+For personal monitoring: A query every 30 - 60 seconds ( ”setInterval(updateDashboard, 60000);” ) is considered ideal. This provides up-to-date data without unnecessarily requesting the project servers.
+Safe maximum frequency: Avoid making more than one request every 5-10 seconds. More frequent requests can be interpreted as a spam or bot attack.
+I recommend setting the refresh time of the update control panel to 120,000 milliseconds, which is 2 minutes. DO NOT open multiple devices simultaneously with the same application, as it generates a conflict Cloudfare: Too many requests per minute.
 
 #### **4. Thoughtful User Experience**
 
