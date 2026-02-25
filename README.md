@@ -1,4 +1,4 @@
-# In the new version we added Duco Price and Last Transaction for more complex monitoring.
+# În noua versiune am adăugat Duco Price și Last Transaction pentru o monitorizare mai complexă.
 <img width="1154" height="894" alt="image" src="https://github.com/user-attachments/assets/18b39a20-a5a8-49df-9862-329c112ae07c" />
 
 
