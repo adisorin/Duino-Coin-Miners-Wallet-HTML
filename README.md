@@ -1,5 +1,6 @@
 # În noua versiune am adăugat Duco Price și Last Transaction pentru o monitorizare mai complexă.
-<img width="1154" height="894" alt="image" src="https://github.com/user-attachments/assets/18b39a20-a5a8-49df-9862-329c112ae07c" />
+<img width="1156" height="896" alt="image" src="https://github.com/user-attachments/assets/b69ed2f8-fb94-44ab-a4a9-c8ce301bff4a" />
+
 
 
 
