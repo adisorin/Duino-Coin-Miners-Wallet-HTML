@@ -1,4 +1,5 @@
-# În noua versiune am adăugat Duco Price și Last Transaction pentru o monitorizare mai complexă.
+# În noua versiune am adăugat Duco Price și Last Transaction pentru o monitorizare mai complexă
+# DUCO-SCOUNT-3D.V2.7.4
 <img width="1156" height="896" alt="image" src="https://github.com/user-attachments/assets/b69ed2f8-fb94-44ab-a4a9-c8ce301bff4a" />
 
 
