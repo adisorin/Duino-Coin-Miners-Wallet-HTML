@@ -1,5 +1,6 @@
 # In the new version we added Duco Price and Last Transaction for more complex monitoring.
-<img width="1154" height="897" alt="image" src="https://github.com/user-attachments/assets/41c6b42a-92d6-4c0e-8916-b32e24159970" />
+<img width="1154" height="894" alt="image" src="https://github.com/user-attachments/assets/18b39a20-a5a8-49df-9862-329c112ae07c" />
+
 
 
 # DUCO-SCOUNT-3D.V2.7.2
